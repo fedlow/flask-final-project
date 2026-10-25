@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-container">
+    <h2>Вход</h2>
+    <form method="POST">
+        <input type="text" name="username" placeholder="Логин" required>
+        <input type="password" name="password" placeholder="Пароль" required>
+        <button type="submit" class="btn">Войти</button>
+    </form>
+    <p style="text-align:center; margin-top:15px;">Нет аккаунта? <a href="{{ url_for('register') }}" style="color:#60a5fa;">Зарегистрируйтесь</a></p>
+</div>
+{% endblock %}

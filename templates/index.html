@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Мои записи</h1>
+<div class="cards-grid">
+    {% for card in cards %}
+        <a href="{{ url_for('card', card_id=card.id) }}" class="card">
+            <div class="card-icon">💡</div>
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.subtitle }}</p>
+        </a>
+    {% endfor %}
+    <a href="{{ url_for('create') }}" class="card add-card">
+        <div class="plus">+</div>
+    </a>
+</div>
+{% endblock %}

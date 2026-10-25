@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="center">
+    <h1>Добро пожаловать в Блог</h1>
+    <p>Пожалуйста, авторизуйтесь или зарегистрируйтесь</p>
+    <div class="buttons">
+        <a href="{{ url_for('login') }}" class="btn">Вход</a>
+        <a href="{{ url_for('register') }}" class="btn">Регистрация</a>
+    </div>
+</div>
+{% endblock %}
